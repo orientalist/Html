@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Index</title>    
+        <!-- css、js Area -->
+        <script src="../Html/jquery/jquery.js"></script>
+        <style type="text/css">
+            .nav{
+                text-align: center;                
+                height:30px;
+                background-color:black;                
+            }               
+            .nav div a{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size:20px;                
+                color:red;
+                text-align:center;
+            }
+            .nav div{
+                float: left;
+            }
+            body{
+                background-image:url(../Html/Resource/mc.png);
+            }
+        </style>
+    </head>    
+    <body>                
+        <nav class="nav">
+            <script>
+                var titles=["Wikipedia","Google","Facebook","Amazon","YouTube","GitHub","PayCandy","Instagram","Orientalist","Zhuang"];
+                var urls=[
+                    "https://zh.wikipedia.org/zh-tw/Wikipedia:%E9%A6%96%E9%A1%B5",
+                    "https://www.google.com.tw/webhp?hl=zh-TW&sa=X&ved=0ahUKEwil__rRp_jdAhUMPrwKHVxwDCkQPAgH",
+                    "https://zh-tw.facebook.com/",
+                    "https://www.amazon.com/b/?ie=UTF8&node=230659011&tag=googleglobalp-20&hvadid=293440018742&hvpos=1t1&hvnetw=g&hvrand=7324757617346865796&hvpone=&hvptwo=&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9040379&hvtargid=kwd-10573980&ref=pd_sl_7ml4ari1jb_e",
+                    "https://www.youtube.com/?gl=TW&hl=zh-tw",
+                    "https://github.com/",
+                    "https://mall.paycandy.com/",
+                    "https://www.instagram.com/?hl=zh-tw",
+                    "https://github.com/orientalist",
+                    "https://github.com/x774436248"
+                ];
+                var widthOfdiv=$(".nav").width()/10;                
+                for(be=0;be<titles.length;be++){
+                    var link='<div class="divOfNav"><a href="'+urls[be]+'">'+titles[be]+'</a></div>';
+                    $(".nav").append(link);
+                }
+                $(".divOfNav").width(widthOfdiv);
+            </script>
+        </nav>
+        <div style="text-align: center">
+            <h1 style="font-family:微軟正黑體">金拱門</h1>
+        </div>        
+    </body>
+</html>
