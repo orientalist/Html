@@ -9,6 +9,12 @@
             "request": "launch",
             "name": "Index",            
             "file": "${workspaceFolder}/index.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "The Meeting Room",            
+            "file": "${workspaceFolder}/TheMeetingRoom.html"
         }
     ]
 }
