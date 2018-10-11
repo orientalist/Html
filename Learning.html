@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learning</title>
+    <!--BootStrap css-->
+    <link rel="stylesheet" href="../Html/bootstrap4/css/bootstrap.min.css" />
+    <style>
+        #topBar{
+            background-color:#77DDFF;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="topBar">
+        <a class="navbar-brand" href="#">Zhuang's Zone</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarAll">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarAll">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="ddGit" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        GitHubs
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="ddGit">
+                        <a class="dropdown-item" href="https://github.com/orientalist">orientalist</a>
+                        <a class="dropdown-item" href="https://github.com/x774436248">x774436248</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://github.com">GitHub</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="nav_BS">BootStrap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="render_body"></div>
+
+    <!--Default jQuery-->
+    <script src="../Html/jquery/jquery.js"></script>
+    <script src="../Html/bootstrap4/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            initialComponent();
+        });
+        var initialComponent=function(){
+            $(".nav-link").click(function(){
+                $("#render_body").empty();
+            });
+
+            $("#nav_BS").click(function(){
+                $.ajax({
+                    url:"index.html",
+                    dataType:"html"
+                }).done(function(content){
+                    $("#render_body").html(content);
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

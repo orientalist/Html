@@ -15,6 +15,13 @@
             "request": "launch",
             "name": "The Meeting Room",            
             "file": "${workspaceFolder}/TheMeetingRoom.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Learning",            
+            "file": "${workspaceFolder}/Learning.html",
+            "runtimeArgs":["--allow-file-access-from-files"]
         }
     ]
 }
