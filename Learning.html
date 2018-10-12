@@ -40,6 +40,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#" id="nav_BS">BootStrap</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="nav_Talk">留言板</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -59,7 +62,16 @@
 
             $("#nav_BS").click(function(){
                 $.ajax({
-                    url:"index.html",
+                    url:"BootStrap.html",
+                    dataType:"html"
+                }).done(function(content){
+                    $("#render_body").html(content);
+                });
+            });
+
+            $("#nav_Talk").click(function(){
+                $.ajax({
+                    url:"TalkArea.html",
                     dataType:"html"
                 }).done(function(content){
                     $("#render_body").html(content);
