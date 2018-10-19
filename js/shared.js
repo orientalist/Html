@@ -42,3 +42,22 @@ var initDashBoard = function() {
     }
   });
 };
+var initMenuItmClick=function(){
+  $(".Menu_Item").click(function(e) {
+    var urlStr = rootDoc + "/";
+    var Nodes = $(e.currentTarget)
+      .closest('li[class^="Root_item"]')
+      .find("div");
+    $.each(Nodes, function(index, value) {
+      urlStr += value.innerText + "/";
+    });
+    urlStr=urlStr.substring(0,urlStr.length-1)+".html";  
+    urlStr=urlStr.replace(/ /g,"");    
+    $.ajax({
+      url: urlStr,
+      dataType: "html"
+    }).done(function(content) {
+      $(".page_body").html(content);
+    });
+  });
+} 

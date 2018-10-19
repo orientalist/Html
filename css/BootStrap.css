@@ -19,7 +19,7 @@
 #db_button:hover{
     background-color:#999999;
 }                             
-#bootStrap_body{                
+.page_body{                
     width: 100vw;
     height: 95vh;
     float: left;
