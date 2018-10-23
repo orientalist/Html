@@ -1,0 +1,32 @@
+.tb_desc{
+    margin: auto;
+    text-align: left;
+    border:1px solid black;
+    margin-left:20px;
+}
+.div_link{
+    text-align: center;
+}
+.tb_ForContent {
+    margin: auto;
+    border: 1px solid black;
+}
+
+.tb_ForContent td {
+    border: 1px solid black;
+}
+
+.tb_ForContent tr :first-child {
+    background-color: black;
+    color: white;
+}
+.div_main{
+    display: block;overflow: auto;
+}
+.div_content{
+    width: 50%;float: left;
+}
+.tb_desc tr:nth-child(odd){
+    background-color: black;
+    color:white;
+}
