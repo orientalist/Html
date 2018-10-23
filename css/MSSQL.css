@@ -2,7 +2,13 @@
     margin: auto;
     text-align: left;
     border:1px solid black;
-    margin-left:20px;
+    width: 80%;    
+}
+.div_content{
+    width: 50%;
+    float: left;    
+    vertical-align: middle;
+    display: table-cell;
 }
 .div_link{
     text-align: center;
@@ -10,6 +16,7 @@
 .tb_ForContent {
     margin: auto;
     border: 1px solid black;
+    display: inline-block;
 }
 
 .tb_ForContent td {
@@ -22,9 +29,6 @@
 }
 .div_main{
     display: block;overflow: auto;
-}
-.div_content{
-    width: 50%;float: left;
 }
 .tb_desc tr:nth-child(odd){
     background-color: black;

@@ -1,17 +1,17 @@
 <div style="text-align: center;">
-    <h1>TransactionScope</h1>
-    <hr>
+    <h1>TransactionScope</h1>    
+    <br>
     <div class="div_main">
         <div class="div_content">
             <table class="tb_desc">
                 <tr>
-                    <td>加入時間:</td>                    
+                    <td>加入時間:</td>
                 </tr>
                 <tr>
                     <td>2018/10/23</td>
                 </tr>
                 <tr>
-                    <td style="vertical-align: top;">加入原因:</td>                    
+                    <td style="vertical-align: top;">加入原因:</td>
                 </tr>
                 <tr>
                     <td>可控管區域內所有新增/刪除/修改資料庫之交易，
@@ -32,9 +32,59 @@
                 </tr>
             </table>
         </div>
-    </div>    
+    </div>
     <hr>
     <div class="div_link">
+        <h1>MSDN</h1>
         <a href="https://docs.microsoft.com/zh-tw/dotnet/api/system.transactions.transactionscope?redirectedfrom=MSDN&view=netframework-4.7.2">TransactionScope</a>
+    </div>
+    <hr>
+    <div>
+        <h1>延伸問題</h1>
+        <br>
+        <div class="div_content">
+            <table class="tb_desc">
+                <tr>
+                    <td>加入時間</td>
+                </tr>
+                <tr>
+                    <td>2018/10/23</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">加入原因:</td>
+                </tr>
+                <tr>
+                    <td>在using(sqlconnection)區塊中若使用包含呼叫其他資料庫的Function，
+                        <br> 將造成Exception:
+                        <br> 與目前連接關聯的交易已完成，但尚未處置。
+                        <br> 必須先處置交易，才能使用連接來執行 SQL 陳述式。
+                        <br>The transaction associated with the current connection has completed but has not been disposed.
+                        <br> The transaction must be disposed before the connection can be used to execute SQL statements.
+                    </td>
+                </tr>
+                <tr>
+                    <td>研判原因</td>
+                </tr>
+                <tr>
+                    <td>可能為TransactionScope內每次SQLConnection內部不可有其他SQLConnection</td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_content">
+            <table class="tb_ForContent">
+                <tr>
+                    <td>名稱</td>
+                    <td>SQLConnection Exception</td>
+                </tr>
+                <tr>
+                    <td>說明</td>
+                    <td>於SQLConnection區塊內呼叫其他資料庫造成Exception</td>
+                </tr>
+                <tr>
+                    <td>解決辦法</td>
+                    <td>將須呼叫其他資料庫的Function拉出至SQLConnection區塊外</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
