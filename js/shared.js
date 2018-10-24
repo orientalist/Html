@@ -42,22 +42,31 @@ var initDashBoard = function() {
     }
   });
 };
-var initMenuItmClick=function(){
-  $(".Menu_Item").click(function(e) {
+var initMenuItmClick=function(){  
+  $(".Menu_Item").click(function(e) {           
     var urlStr = rootDoc + "/";
-    var Nodes = $(e.currentTarget)
-      .closest('li[class^="Root_item"]')
-      .find("div");
-    $.each(Nodes, function(index, value) {
-      urlStr += value.innerText + "/";
-    });
-    urlStr=urlStr.substring(0,urlStr.length-1)+".html";  
-    urlStr=urlStr.replace(/ /g,"");    
-    $.ajax({
-      url: urlStr,
-      dataType: "html"
-    }).done(function(content) {
-      $(".page_body").html(content);
-    });
+    var Nodes=$(e.currentTarget).parentsUntil('#menu');
+
+    var str="";
+
+    var ParentNode=$(e.currentTarget).parent()[0];
+    while($(ParentNode).attr("id")!='menu'){      
+      if(ParentNode.localName=='li'){        
+        str=$(ParentNode).children('div')[0].innerText+"/"+str;        
+      }
+      ParentNode=$(ParentNode).parent()[0];
+    }
+    str=rootDoc+'/'+str;
+    
+    str=str.substr(0,str.length-1);
+    str+=".html";    
+    str=str.replace(/ /g,"");
+    $(".page_body").load(decodeURI(encodeURI(str)));
+    // $.ajax({
+    //   url: decodeURI(str),
+    //   dataType: "html"
+    // }).done(function(content) {
+    //   $(".page_body").html(content);
+    // });
   });
 } 

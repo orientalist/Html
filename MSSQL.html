@@ -1,8 +1,9 @@
 <style>
-    #menu li:not(.Root_item){
+    #menu li:not(.Root_item) {
         width: 150px;
     }
-    #menu ui{
+
+    #menu ui {
         width: 150px;
     }
 </style>
@@ -11,14 +12,28 @@
     <div id="dashBoard" class="db_open">
         <div id="db_content">
             <ul id="menu">
-                <li class="Root_item"><div>Transaction</div>
+                <li class="Root_item">
+                    <div>Transaction</div>
                     <ul>
-                        <li><div class="Menu_Item">TransactionScope</div></li>
+                        <li class="File_dir">
+                            <div class="Menu_Item">TransactionScope</div>
+                        </li>
                     </ul>
                 </li>
-                <li class="Root_item"><div>SQL</div>
+                <li class="Root_item">
+                    <div>SQL</div>
                     <ul>
-                        <li><div class="Menu_Item">SQLConnection</div></li>
+                        <li class="File_dir">
+                            <div class="Menu_Item">SQLConnection</div>
+                        </li>
+                        <li class="File_dir">
+                            <div>Stored_Procedure</div>
+                            <ul>
+                                <li>
+                                    <div class="Menu_Item">ANSI_NULLS</div>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
