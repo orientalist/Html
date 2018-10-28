@@ -2,7 +2,7 @@
     width: 20vw;
     height: 95vh;   
     float: left;    
-    position: absolute;                         
+    position: fixed;                         
 }              
 #db_content{                
     float: left;
@@ -21,7 +21,13 @@
 }                             
 .page_body{                
     width: 100vw;
-    height: 95vh;
     float: left;
-    position: absolute;    
-}   
+    position: fixed;
+    overflow-y: scroll;
+}
+#menu li:not(.Root_item) {
+    width: 150px;
+}
+.render_body{
+    position: relative;
+}

@@ -1,0 +1,54 @@
+<style>
+    #dk_tb{
+        border:1px solid black;
+        text-align: center;
+    }
+    #dk_tb td{
+        border:1px solid black;
+    } 
+</style>
+<div>
+    <table id="dk_tb" style="margin:auto;">
+        <tr><td colspan="2">Basic Syntax</td></tr>
+        <tr>
+            <td colspan="1">Syntax</td>
+            <td colspan="1">Description</td>
+        </tr>
+        <tr>
+            <td>docker ps</td>
+            <td>To show status of container.</td>
+        </tr>
+        <tr>
+            <td>docker images</td>
+            <td>To show all local images.</td>
+        </tr>
+        <tr>
+            <td>docker pull [name of image]:[tags]</td>
+            <td>To get specific image.</td>
+        </tr>
+        <tr>
+            <td>docker stop [first 4 characters of containerID]</td>
+            <td>To stop specific ciontainer.</td>
+        </tr>
+        <tr>
+            <td>docker rm [first 4 characters of containerID]</td>
+            <td>To remove specific container</td>
+        </tr>
+        <tr>
+            <td>docker rmi [first 4 characters of image]</td>
+            <td>To remove specific image</td>
+        </tr>
+        <tr>
+            <td>docker run -it -p [local port]:[container port] -v [directory of local file]:[directory of container]</td>
+            <td>To link files to specific container</td>
+        </tr>
+        <tr>
+            <td>docker run -p [local port]:[container port] [image]:[tags] [application of image]</td>
+            <td>To run specific application of specific image.</td>
+        </tr>
+        <tr>
+            <td>docker start [first 4 characters of containerID.]</td>
+            <td>To start specific sontainer.</td>
+        </tr>
+    </table>
+</div>

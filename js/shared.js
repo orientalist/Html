@@ -2,7 +2,7 @@ $(document).ready(function() {
   initialComponent();
 });
 var initialComponent = function() {
-  $(".nav-link").click(function() {
+    $(".nav-link").click(function() {
     $("#render_body").html("");
     fnGetRenderbody(this);
   });
@@ -18,6 +18,12 @@ var fnGetRenderbody = function(e) {
   }
 };
 var initDashBoard = function() {
+  var heightOfNav=$("#topBar").outerHeight();
+  $("#dashBoard").css("margin-top",heightOfNav+"px"); 
+  $(".page_body").css("margin-top",heightOfNav+"px"); 
+  var heightOfVH=$(window).height();
+  heightOfVH=heightOfVH-heightOfNav;
+  $(".page_body").css("height",heightOfVH+"px");
   var widthOfDashBoard = $("#dashBoard").width();
   var animateDistance = -(widthOfDashBoard - 15).toString() + "px";
   $("#db_button").click(function() {
