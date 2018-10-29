@@ -1,0 +1,12 @@
+.sampleElement div:nth-child(1){
+    float: left;
+}
+.sampleElement div:last-child{
+    float:right;
+}
+.emphasize{
+    color: red;
+}
+.sampleElement{
+    text-align: center;
+}

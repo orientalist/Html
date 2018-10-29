@@ -1,0 +1,66 @@
+<div style="text-align:center">
+    <h1>display</h1>
+    <hr>
+    <div style="text-align:center;width:50%;margin:auto;">
+        所有html元素都具有預設的display值，絕大多數為block或inline。
+        <div style="text-align:left;">
+            <h3>block</h3>
+            block表示區塊元素。
+            <br>
+            Example:
+            <div class="sampleElement" style="border:2px solid;border-color:#6AC5AC">
+                <div>&lt;div&gt;</div>
+                div為標準區塊元素，<span class="emphasize">區塊元素</span>會使其內容自新一行開始顯示，並稱滿元素
+                其他區塊元素:p、form、header、footer、section...
+                <div>&lt;/div&gt;</div>
+            </div>
+            <br>
+            <h3>inline</h3>
+            <div>
+                inline元素可包裹片段內容，加以加工且不打亂原本配置，如<span class="emphasize">&lt;span&gt;元素&lt;/span&gt;</span>
+                以及&lt;a&gt;元素
+            </div>
+            <br>
+            <h3>inline-block</h3>
+            <div>
+                inline-block之元素會以水平並且區塊的形式呈現
+                <br>
+                Example:
+                <br>
+                <div class="sampleElement" style="display:inline-block;width:30%;border:2px solid;border-color:indianred">
+                    <div>&lt;div&gt;</div>
+                    <br>
+                    我有設display:inline-block;
+                    <br>
+                    <div>&lt;/div&gt;</div>
+                </div>
+                <div class="sampleElement" style="display:inline-block;width:30%;border:2px solid;border-color:indianred">
+                    <div>&lt;div&gt;</div>
+                    <br>
+                    我有設display:inline-block;
+                    <br>
+                    <div>&lt;/div&gt;</div>
+                </div>
+                <div class="sampleElement" style="display:inline-block;width:30%;border:2px solid;border-color:indianred">
+                    <div>&lt;div&gt;</div>
+                    <br>
+                    我有設display:inline-block;
+                    <br>
+                    <div>&lt;/div&gt;</div>
+                </div>
+            </div>
+            <br>
+            <h3>none</h3>
+            none表示隱藏該元素，通常搭配javascript使用，
+            <span class="emphasize">與visibility不同之處在於none不會保留該元素位置，visibility:hidden則會。</span>
+        </div>
+    </div>
+    <hr>
+    <a target="_blank" href="http://zh-tw.learnlayout.com/display.html">參考文章</a>
+</div>
+
+<script>
+    $(document).ready(function () {
+        initElements();
+    });
+</script>

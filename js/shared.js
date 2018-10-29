@@ -68,11 +68,13 @@ var initMenuItmClick=function(){
     str+=".html";    
     str=str.replace(/ /g,"");
     $(".page_body").load(decodeURI(encodeURI(str)));
-    // $.ajax({
-    //   url: decodeURI(str),
-    //   dataType: "html"
-    // }).done(function(content) {
-    //   $(".page_body").html(content);
-    // });
+    $("#db_button").click();
   });
 } 
+var initElements=function(){
+  $.each($(".sampleElement"),function(index,value){
+    var color=$(value).css("border-color");
+    $(value).children('div:nth-child(1)').css("background-color",color);
+    $(value).children('div:last-child').css("background-color",color);
+  });
+}

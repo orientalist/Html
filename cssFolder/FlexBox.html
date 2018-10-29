@@ -1,4 +1,124 @@
 <div style="text-align:center;">
     <h1>Flex Box</h1>
     <hr>
+    <img src="Resource/flexbox.jpg">
+    <div style="width:50%;margin:auto;">
+        <h3>模型概念</h3>
+        與一般盒子類模型差別在於:FlexBox具有<span class="emphasize">水平起始/終點(main start/main end)</span>，
+        <span class="emphasize">垂直起始終點(cross start/cross end)</span>，
+        <span class="emphasize">水平軸與垂直軸(main axis/cross axis)</span>
+        ，以及<span class="emphasize">水平尺寸與垂直尺寸(main size/cross size)</span>。
+    </div>
+    <div style="width:50%;margin:auto;">
+        <hr>
+        <h3>屬性</h3>
+        <ul style="text-align:left;">
+            <li>display</li>
+            <li>flex-direction</li>
+            <li>justify-content</li>
+            <li>align-items</li>
+            <li>align-self</li>
+            <li>align-content</li>
+            <li>flex-wrap</li>
+            <li>order</li>
+            <li>flex</li>
+        </ul>
+    </div>
+    <div style="width:50%;margin:auto;">
+        <hr>
+        <h3>Example</h3>
+        <div style="text-align:left;">
+            <h4>display</h4>
+            display:flex與display:inline-flex大約等於display:block
+            及display:inline-block，但其下子元素有更多彈性設定且其後方元素不自動換行。<br>
+        </div>
+        <hr>
+        <div style="text-align:left;">
+            <h4>flex-direction</h4>
+            表示內容元素的"排列方向"，分別有:
+            <ul>
+                <li>row:預設值，由左到右，由上到下
+                    <br>
+                    <div style="border:1px solid black;height:90px;width:90px;display:inline-flex;flex-direction:row;">
+                        <div style="width:33%;height:33%;text-align:center;">1</div>
+                        <div style="width:33%;height:33%;text-align:center;">2</div>
+                        <div style="width:33%;height:33%;text-align:center;">3</div>
+                    </div>
+                </li>
+                <li>row-reverse:與row相反
+                    <br>
+                    <div style="border:1px solid black;height:90px;width:90px;display:inline-flex;flex-direction:row-reverse;">
+                        <div style="width:33%;height:33%;text-align:center;">1</div>
+                        <div style="width:33%;height:33%;text-align:center;">2</div>
+                        <div style="width:33%;height:33%;text-align:center;">3</div>
+                    </div>
+                </li>
+                <li>column:自上到下，由左至右
+                    <br>
+                    <div style="border:1px solid black;height:90px;width:90px;display:inline-flex;flex-direction:column;">
+                        <div style="width:33%;height:33%;text-align:center;">1</div>
+                        <div style="width:33%;height:33%;text-align:center;">2</div>
+                        <div style="width:33%;height:33%;text-align:center;">3</div>
+                    </div>
+                </li>
+                <li>column-reverse:與column相反
+                    <br>
+                    <div style="border:1px solid black;height:90px;width:90px;display:inline-flex;flex-direction:column-reverse;">
+                        <div style="width:33%;height:33%;text-align:center;">1</div>
+                        <div style="width:33%;height:33%;text-align:center;">2</div>
+                        <div style="width:33%;height:33%;text-align:center;">3</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div style="text-align:left;">
+            <h4>justify-content</h4>
+            決定內容物於外容器的"水平對齊"位置:
+            <ul>
+                <li>flex-start:預設值，對齊最左邊的main start
+                    <div style="border:1px solid black;height:50px;justify-content:flex-start;display:flex;">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </li>
+                <li>flex-end:對齊最右邊的main end
+                    <div style="border:1px solid black;height:50px;justify-content:flex-end;display:flex;">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </li>
+                <li>center:水平置中
+                    <div style="border:1px solid black;height:50px;justify-content:center;display:flex;">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </li>
+                <li>space-between:水平均分，左右貼齊start與end
+                    <div style="border:1px solid black;height:50px;justify-content:space-between;display:flex;">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </li>
+                <li>space-around:水平均分，間距相等
+                    <div style="border:1px solid black;height:50px;justify-content:space-around;display:flex;">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+
+
+<script>
+    $(document).ready(function () {
+        initElements();
+    });
+</script>
