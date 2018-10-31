@@ -1,0 +1,69 @@
+<style>
+    #cube_bg {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #cube {
+        width: 20vw;
+        height: 20vh;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;      
+        flex-direction: column;  
+    }
+    #color_code{
+        color: white;
+    }
+    #border_radius{
+        color: white;
+    }
+</style>
+<div id="cube_bg">
+    <div id="cube">
+        <span id="color_code"></span>
+        <span id="border_radius"></span>
+    </div>
+</div>
+<script>
+    var screenWidth=$(window).width();
+    var screenHeight=$(window).height();
+    $(document).ready(function () {                         
+        changeColor();
+    });
+    var changeColor = function () {
+        var position_x=$("#cube").position().left;
+        var position_y=$("#cube").position().top;                
+        var color = "#";
+        for (be = 1; be <= 6; be++) {
+            var num = Math.floor(Math.random() * 10);
+            color += num;
+        }
+        $("#cube").css("background-color", color);
+        $("#color_code").text(color);
+
+        // var width=(Math.floor(Math.random()*1000))+"px";
+        // var height=(Math.floor(Math.random()*1000))+"px";
+        // $("#cube").css("width", width);
+        // $("#cube").css("height", height);
+
+        // var borderRadius=(Math.floor(Math.random()*100))+'%';
+        // $("#cube").css("border-radius", borderRadius);
+        // $("#border_radius").text(borderRadius);        
+        
+        var move_distance=(Math.floor(Math.random()*10)*(Math.random()<0.5?-1:1));
+        
+        if((position_x+move_distance>0&&position_x+move_distance<screenWidth)
+        &&(position_y+move_distance>0&&position_y+move_distance<screenHeight)){
+            var newPositionX=(position_x+move_distance);
+            var newPositionY=(position_y+move_distance);
+            //console.log(newPositionX+","+newPositionY);
+            $("#cube").css("top",newPositionX);
+            $("#cube").css("left",newPositionY);
+        }
+        setTimeout(changeColor,2000);
+    }
+</script>

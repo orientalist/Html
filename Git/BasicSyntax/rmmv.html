@@ -1,0 +1,30 @@
+<div class="content">
+    <h1>rm mv</h1>
+    <hr>
+    <div>
+        <h3>git rm [file]</h3>
+        直接將檔案刪除，並且將該修改加入暫存區。<br>
+        原流程:<br>
+        rm file→git add file→git commit -m ""<br>
+        本流程:<br>
+        git rm file→git commit -m ""
+        <h3>參數</h3>
+        <ul>
+            <li>git rm [file] --cached:<br>
+                <span class="emphasize">非刪除!</span>僅是解除git控管該檔案。
+            </li>
+        </ul>
+        <hr>
+        <h3>git mv [file] [new file name]</h3>
+        直接將該檔案改名並放入暫存區。<br>
+        原流程:<br>
+        mv file [new file name]→git add [new file name]→git commit -m ""<br>
+        本流程:<br>
+        git mv file [new file name]→git commit -m ""<br>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+    initElements();
+});
+</script>

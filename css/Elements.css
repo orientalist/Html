@@ -10,3 +10,12 @@
 .sampleElement{
     text-align: center;
 }
+.content{        
+    text-align: center;        
+}    
+.content div{
+    width: 50vw;
+    align-self: center;
+    margin: auto;
+    text-align: left;
+}  

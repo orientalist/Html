@@ -1,0 +1,50 @@
+<div class="content">
+    <h1>init add commit</h1>
+    <hr>
+    <div>
+        <h3>git init</h3>
+        將所在的資料夾交由git控管，會產生.git資料夾。<br>
+        <span class="emphasize">取消git控管:</span><br>
+        直接刪除.git資料夾。
+        <hr>
+        <h3>git add [name of file]</h3>
+        將檔案加至暫存區(Staging Area)<br>
+        <ul>
+            <li>git add *.Filename Extension:<br>
+                將特定副檔名的全部檔案加至暫存區。(Filename Extension=副檔名)<br>
+            </li>
+            <li>
+                git add --all:<br>
+                將該資料夾下所有檔案加至暫存區。
+            </li>
+            <li>
+                git add .&nbsp;:<br>
+                類似於git add -all，但git add .僅會將目前資料夾下的檔案加入暫存區，而git add --all則是加入整個專案。
+            </li>
+        </ul>
+        *對git而言，任何的修改後的檔案都不會自動加入暫存區，若add檔案後又修改該檔案，則暫存區內的是未修改的檔案。
+        <hr>
+        <h3>git commit -m "[Message about commit]"</h3>
+        將在暫存區中所有檔案傳輸至儲存庫(Repository)，即建立了"版本"。        
+        <h3>參數</h3>
+        <ul>
+            <li>git commit -a -m "[Commit Message]":<br>
+                等於git add --all 加上 git commit -m ""，<span class="emphasize">但僅對已存在Repository的檔案有效</span>
+                ，也就是說untracked檔案是無效的。
+            </li>
+            <li>git commit --amend -m "[commit message]":<br>
+                修改最近一次commit的文字訊息。<br>
+                <span class="emphasize">其他作用:在已commit後將檔案加入該次commit。</span><br>
+                舉例說明:<br>
+                git commit -m "Create files"→git add newfile→<span class="emphasize">gti commit --amend --no-edit</span><br>
+                將newfile加入commit訊息為Create files的commit中
+            </li>
+        </ul>        
+        <hr>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        initElements();
+    });    
+</script>

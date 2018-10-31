@@ -8,7 +8,7 @@ var initialComponent = function() {
   });
 };
 var fnGetRenderbody = function(e) {
-  if (!$(e).hasClass("noChild")) {
+  if (!$(e).hasClass("noChild")) {    
     $.ajax({
       url: $(e).attr("id"),
       dataType: "html"

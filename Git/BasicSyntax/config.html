@@ -1,0 +1,24 @@
+<div class="content">
+    <h1>config</h1>
+    <hr>
+    <div>
+        <h3>git config --list</h3>
+        顯示目前所有config設定
+        <hr>
+        <h3>git config --global/--local user.name [username]</h3>
+        設定全域/本地的git使用者名稱
+        <hr>
+        <h3>git config --global/--local user.email [user email]</h3>
+        設定全域/本地的git使用者信箱
+        <hr>
+        <h3>git config --global core.editor [editor(emacs)]</h3>
+        更換全域的文字編輯器
+        <hr>
+        <h3>git config --global alias.[縮寫] [command]</h3>
+        將全域command指派給特定的縮寫，如:<br>
+        git config --global alias.st status<br>
+        若指派的command帶有參數，需加入""，如:<br>
+        git config --global alias.l "log --oneline --graph"
+        <hr>
+    </div>
+</div>
