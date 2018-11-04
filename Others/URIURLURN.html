@@ -1,0 +1,48 @@
+<div class="content">
+    <h1>URI URL URN</h1>
+    <hr>
+    <div>
+        <h3>簡介</h3>
+        <span class="emphasize">URL與URN都是URI的子集。</span>
+        <img src="Resource/Others/URIURLURN.jpg"><br>
+        URI可被視為URL與URN或兩者兼備。URN(統一資源名)如同一個人的名稱，URL則代表一個人的住址。
+        <br>
+        URN定義某一事物的身分，URL提供尋找該事物的路徑。
+        <hr>
+        <h3>URI(<span class="emphasize">Uniform Resource Identifer</span>)統一資源標誌符:</h3>
+        URI是用於標示<span class="emphasize">網路資源</span>的字串，<br>
+        允許使用者透過特定的協定進行操作互動，常見的形式是URL與URN。<br>
+        文法:<br>
+        由 [URI協定名(http、ftp、mailto、file...)][:][協定對應內容] 所構成<br>
+        <a target="_blank" href="https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E6%A0%87%E5%BF%97%E7%AC%A6">參考資料</a>
+        <hr>
+        <h3>URL(<span class="emphasize">Uniform Resource Location</span>)統一資源定位器:</h3>
+        URL是一種URI，標示一個網際網路資源，並指定取得方式。<br>
+        標準格式:<br>
+        協定類型:[//伺服器位址[:埠號]][/資源層級UNIX路徑]檔案名[?查詢][#片段ID]<br>
+        標準格式:<br>
+        協定類型:[//[存取資源需要的憑證資訊@]伺服器位置[:埠號]][/資源層級UNIX檔案路徑]檔案名[?查詢][#片段ID]<br>
+        <span class="emphasize">存取資源憑證資訊@、埠號、查詢、片段ID皆屬選填</span><br>
+        <h4>Http</h4>
+        http使用URL，包含:<br>
+        <ol>
+            <li>傳送協定(http)</li>
+            <li>層級URL標記符號(固定//)</li>
+            <li>存取憑證(可省略)</li>
+            <li>伺服器(通常為域名/IP)</li>
+            <li>埠號(可省)</li>
+            <li>路徑(以/分隔)</li>
+            <li>查詢(GET模式的表單參數，以?開始，後為Key=value，多組以&連接)，通常以UTF-8編碼</li>
+            <li>片段(以#起始)</li>
+        </ol>
+        實例:<br>
+        http://zh.wilipedia.org:80/w/index.php?title=Special<br>
+        #備註:URL使用ASCII編碼<br>
+        <a target="_blank" href="https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6">參考資料</a>
+        <hr>
+        <h3>URN(<span class="emphasize">Uniform Resource Name</span>)統一資源名稱:</h3>
+        URN是基於某命名空間通過名稱指定資源的URI，無須路徑便可獲取該資源。<br>
+        <a target="_blank" href="https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0">參考資料</a>
+        <hr>
+    </div>
+</div>
